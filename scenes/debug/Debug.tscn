@@ -1,0 +1,85 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://ball/Ball.tscn" type="PackedScene" id=1]
+[ext_resource path="res://characters/keroppi/PlayerAni.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/brick/Brick.tscn" type="PackedScene" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 4.875, 299.5 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 203.5, 6.5 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 4.875, 299.5 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 205.5, 10 )
+
+[node name="Debug" type="Node"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 165, 64 )
+
+[node name="WallLeft" type="StaticBody2D" parent="."]
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallLeft"]
+position = Vector2( -4, 300.5 )
+shape = SubResource( 1 )
+
+[node name="WallBottom" type="StaticBody2D" parent="."]
+position = Vector2( 400, 0 )
+collision_layer = 4
+collision_mask = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallBottom"]
+position = Vector2( -198.5, 606.5 )
+shape = SubResource( 3 )
+
+[node name="WallRight" type="StaticBody2D" parent="."]
+position = Vector2( 400, 0 )
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallRight"]
+position = Vector2( 5, 301 )
+shape = SubResource( 2 )
+
+[node name="Ball" parent="." instance=ExtResource( 1 )]
+position = Vector2( 185, 283 )
+collision_mask = 44
+
+[node name="TopWall" type="StaticBody2D" parent="."]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TopWall"]
+position = Vector2( 197, -9 )
+shape = SubResource( 4 )
+
+[node name="Bricks" type="Node" parent="."]
+
+[node name="Brick" parent="Bricks" instance=ExtResource( 3 )]
+position = Vector2( 221, 396 )
+Health = 4
+
+[node name="Brick2" parent="Bricks" instance=ExtResource( 3 )]
+position = Vector2( 121, 396 )
+Health = 2
+
+[node name="Brick3" parent="Bricks" instance=ExtResource( 3 )]
+position = Vector2( 187, 396 )
+
+[node name="Brick4" parent="Bricks" instance=ExtResource( 3 )]
+position = Vector2( 154, 396 )
+Health = 3
+
+[node name="Brick5" parent="Bricks" instance=ExtResource( 3 )]
+position = Vector2( 255, 396 )
+Health = 5
