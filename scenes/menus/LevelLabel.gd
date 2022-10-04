@@ -7,7 +7,6 @@ var path: String = "res://scenes/levels/"
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	list_levels = get_list_of_levels(path)
-	print(list_levels)
 	self.set_text(list_levels[list_index])
 
 func get_list_of_levels(path):
@@ -42,7 +41,7 @@ func increment_list():
 func decrement_list():
 	list_index -= 1
 	if list_index == -1:
-		list_index = 2
+		list_index = list_levels.size() - 1
 		self.set_text(list_levels[list_index])
 	else:
 		self.set_text(list_levels[list_index])
