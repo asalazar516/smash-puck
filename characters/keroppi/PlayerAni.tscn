@@ -2,16 +2,13 @@
 
 [ext_resource path="res://characters/overlap/Hitbox.tscn" type="PackedScene" id=1]
 [ext_resource path="res://characters/keroppi/Player.gd" type="Script" id=2]
-
-[sub_resource type="StreamTexture" id=35]
-load_path = "res://.import/Kero.png-7532025a74103d71844efaf78f7788bd.stex"
+[ext_resource path="res://output/Kero.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=27]
 extents = Vector2( 9, 5.5 )
 
 [sub_resource type="Animation" id=3]
 length = 0.6
-loop = true
 tracks/0/type = "method"
 tracks/0/path = NodePath(".")
 tracks/0/interp = 1
@@ -118,7 +115,6 @@ tracks/3/keys = {
 
 [sub_resource type="Animation" id=31]
 length = 0.6
-loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -134,7 +130,6 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=32]
 length = 0.6
-loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -385,10 +380,10 @@ __meta__ = {
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 1, -11 )
-texture = SubResource( 35 )
+texture = ExtResource( 3 )
 hframes = 8
 vframes = 8
-frame = 28
+frame = 2
 __meta__ = {
 "_editor_description_": "YXNlcHJpdGVfd2l6YXJkX2NvbmZpZwpwbGF5ZXJ8PUFuaW1hdGlvblBsYXllcgpzb3VyY2V8PXJlczovL291dHB1dC9LZXJvLmFzZQpsYXllcnw9Cm9wX2V4cHw9VHJ1ZQpvX2ZvbGRlcnw9Cm9fbmFtZXw9Cm9ubHlfdmlzaWJsZXw9RmFsc2UKb19leF9wfD0K"
 }
