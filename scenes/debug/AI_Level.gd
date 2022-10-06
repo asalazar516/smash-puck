@@ -43,13 +43,13 @@ func score_achieved():
 	get_tree().call_group('BallGroup', 'stop_ball')
 	$PlayerScore.visible = true
 	$OpponentScore.visible = true
-	print("CPU Score: ", OpponentScore)
-	print("Player Score: ", PlayerScore)
+	print("P2 Score: ", OpponentScore)
+	print("P1 Score: ", PlayerScore)
 	if OpponentScore == 3:
-		$ResultLabel.text = ("CPU wins!")
+		$ResultLabel.text = ("Player 2 wins!")
 		$ResultLabel.visible = true
 	elif PlayerScore == 3:
-		$ResultLabel.text = ("Player wins!")
+		$ResultLabel.text = ("Player 1 wins!")
 		$ResultLabel.visible = true
 	else:
 		$CountdownTimer.start()
