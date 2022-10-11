@@ -19,3 +19,9 @@ texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="invincibility_finished" from="." to="." method="_on_Ball_invincibility_finished"]
+[connection signal="invincibility_started" from="." to="." method="_on_Ball_invincibility_started"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

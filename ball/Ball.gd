@@ -6,6 +6,24 @@ var acceleration: float = 0.5
 var original_velocity
 var new_velocity = Vector2.ZERO
 
+
+var invincible =  false setget set_invincible
+signal invincibility_started
+signal invincibility_finished
+
+onready var timer = $Timer
+
+func set_invincible(value):
+	invincible = value
+	if invincible == true:
+		emit_signal("invincibility_started")
+	else:
+		emit_signal("invincibility_finished")
+
+func start_invincibility(duration):
+	self.invincible = true
+	timer.start(duration)
+
 func _ready():
 	randomize()
 	velocity.y = [-1, 1][randi() % 2]
@@ -27,6 +45,9 @@ func _physics_process(delta):
 			collision_object.collider.hit_block()
 		
 		if "Hitbox" == collision_object.collider.name:
+#			collision_object.collider.hit_ball()
+			print(collision_object.collider.get_owner().player_id)
+			start_invincibility(0.2)
 			velocity.x = lerp(velocity.x, -1 * 2, acceleration)
 			velocity.y = lerp(velocity.y, -1 * 2, acceleration)
 			
@@ -46,3 +67,15 @@ func restart_ball():
 	speed = 100
 	velocity.y = [-1, 1][randi() % 2]
 	velocity.x = [-0.8, 0.8][randi() % 2]
+
+
+func _on_Timer_timeout():
+	self.invincible = false
+
+
+func _on_Ball_invincibility_started():
+	self.set_collision_mask_bit(5, false)
+
+
+func _on_Ball_invincibility_finished():
+	self.set_collision_mask_bit(5, true)
