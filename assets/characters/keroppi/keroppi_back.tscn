@@ -1,9 +1,9 @@
 [gd_scene load_steps=35 format=2]
 
-[ext_resource path="res://characters/overlap/Hitbox.tscn" type="PackedScene" id=1]
-[ext_resource path="res://characters/keroppi/Player.gd" type="Script" id=2]
-[ext_resource path="res://output/Kero.png" type="Texture" id=3]
-[ext_resource path="res://characters/overlap/Hitbox.gd" type="Script" id=4]
+[ext_resource path="res://assets/characters/overlap/Hitbox.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/characters/keroppi/Player.gd" type="Script" id=2]
+[ext_resource path="res://assets/output/Kero.png" type="Texture" id=3]
+[ext_resource path="res://assets/characters/overlap/Hitbox.gd" type="Script" id=4]
 
 [sub_resource type="RectangleShape2D" id=27]
 extents = Vector2( 9, 5.5 )
@@ -18,7 +18,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0.521738 ),
+"times": PoolRealArray( 0.5 ),
 "transitions": PoolRealArray( 1 ),
 "values": [ {
 "args": [  ],
@@ -474,7 +474,7 @@ position = Vector2( 1, -11 )
 texture = ExtResource( 3 )
 hframes = 8
 vframes = 8
-frame = 49
+frame = 28
 __meta__ = {
 "_editor_description_": "YXNlcHJpdGVfd2l6YXJkX2NvbmZpZwpwbGF5ZXJ8PUFuaW1hdGlvblBsYXllcgpzb3VyY2V8PXJlczovL291dHB1dC9LZXJvLmFzZQpsYXllcnw9Cm9wX2V4cHw9RmFsc2UKb19mb2xkZXJ8PQpvX25hbWV8PQpvbmx5X3Zpc2libGV8PUZhbHNlCm9fZXhfcHw9Cg=="
 }

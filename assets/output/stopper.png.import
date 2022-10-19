@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Kero-single.png-c6797c85d77ae85490b687492caf3d5b.stex"
+path="res://.import/stopper.png-6f98976d8a0f8fb1aab47dc4e69541cf.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://output/Kero-single.png"
-dest_files=[ "res://.import/Kero-single.png-c6797c85d77ae85490b687492caf3d5b.stex" ]
+source_file="res://assets/output/stopper.png"
+dest_files=[ "res://.import/stopper.png-6f98976d8a0f8fb1aab47dc4e69541cf.stex" ]
 
 [params]
 
