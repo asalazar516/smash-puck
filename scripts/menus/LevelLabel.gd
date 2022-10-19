@@ -2,7 +2,7 @@ extends Label
 
 var list_index: int = 0
 var list_levels: Array = []
-var path: String = "res://scenes/levels/"
+var path: String = "res://Scenes/levels/"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

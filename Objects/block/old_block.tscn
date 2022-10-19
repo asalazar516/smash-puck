@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Sprites/Block/block.png" type="Texture" id=1]
+[ext_resource path="res://Objects/block/block.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 6, 7.875 )
+
+[node name="Old_Block" type="StaticBody2D"]
+collision_layer = 8
+collision_mask = 3
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0, -6 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_editor_description_": "YXNlcHJpdGVfd2l6YXJkX2NvbmZpZwpwbGF5ZXJ8PQpzb3VyY2V8PXJlczovL291dHB1dC9ibG9jay5hc2Vwcml0ZQpsYXllcnw9TGF5ZXIgMQ0Kb3BfZXhwfD1GYWxzZQpvX2ZvbGRlcnw9Cm9fbmFtZXw9Cm9ubHlfdmlzaWJsZXw9RmFsc2UKb19leF9wfD0K"
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, -2.125 )
+shape = SubResource( 1 )

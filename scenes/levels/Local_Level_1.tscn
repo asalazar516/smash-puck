@@ -1,12 +1,12 @@
 [gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://scripts/manager/AI_Level.gd" type="Script" id=1]
-[ext_resource path="res://assets/characters/keroppi/PlayerAni.tscn" type="PackedScene" id=2]
-[ext_resource path="res://assets/resources/forest.tscn" type="PackedScene" id=3]
-[ext_resource path="res://assets/characters/keroppi/keroppi_back.tscn" type="PackedScene" id=4]
-[ext_resource path="res://assets/block/block.tscn" type="PackedScene" id=5]
-[ext_resource path="res://assets/stopper/stopper.tscn" type="PackedScene" id=6]
-[ext_resource path="res://assets/ball/Ball.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scripts/manager/AI_Level.gd" type="Script" id=1]
+[ext_resource path="res://Objects/characters/keroppi/PlayerAni.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Objects/resources/forest.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Objects/characters/keroppi/keroppi_back.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Objects/block/block.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Objects/stopper/stopper.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Objects/ball/Ball.tscn" type="PackedScene" id=7]
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 200, 38.8125 )

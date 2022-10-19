@@ -27,4 +27,4 @@ func _on_LeftButton_pressed():
 
 
 func _on_HowToButton_pressed():
-	get_tree().change_scene("res://scenes/menus/how_to.tscn")
+	get_tree().change_scene("res://Scenes/menus/how_to.tscn")
