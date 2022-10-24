@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://scenes/debug/AI_Level.gd" type="Script" id=1]
-[ext_resource path="res://assets/block/old_block.tscn" type="PackedScene" id=2]
-[ext_resource path="res://characters/keroppi/PlayerAni.tscn" type="PackedScene" id=3]
-[ext_resource path="res://characters/keroppi/keroppi_back.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scripts/manager/AI_Level.gd" type="Script" id=1]
+[ext_resource path="res://Objects/block/old_block.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Objects/characters/keroppi/PlayerAni.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Objects/characters/keroppi/keroppi_back.tscn" type="PackedScene" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 4.875, 299.5 )

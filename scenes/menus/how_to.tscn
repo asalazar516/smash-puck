@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://characters/keroppi/PlayerAni.tscn" type="PackedScene" id=1]
-[ext_resource path="res://characters/keroppi/keroppi_back.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Objects/characters/keroppi/PlayerAni.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Objects/characters/keroppi/keroppi_back.tscn" type="PackedScene" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 11.6638, 10 )
@@ -32,20 +32,17 @@ margin_right = 340.0
 margin_bottom = 170.0
 
 [node name="Player1" type="Label" parent="Control/CenterContainer/HBoxContainer"]
-margin_left = -54.0
-margin_top = -84.0
 margin_right = 128.0
 margin_bottom = 82.0
 text = "Player 1 Controls:
 Movement: WASD
 Right Hit: E
 Left Hit: Q
-Return to Menu Esc:"
+Return to Menu: Esc"
 
 [node name="Player2" type="Label" parent="Control/CenterContainer/HBoxContainer"]
 margin_left = 132.0
-margin_top = -84.0
-margin_right = 341.0
+margin_right = 285.0
 margin_bottom = 82.0
 text = "Player 2 Controls:
 Movement: Arrrow Keys
