@@ -202,33 +202,38 @@ tracks/0/keys = {
 "values": [ 50.0, 51.0, 50.0, 51.0, 50.0, 51.0, 50.0, 51.0 ]
 }
 
-[sub_resource type="AnimationNodeStateMachine" id=19]
+[sub_resource type="AnimationNodeAnimation" id=27]
+animation = "Attack - FL"
 
-[sub_resource type="AnimationNodeStateMachine" id=20]
+[sub_resource type="AnimationNodeAnimation" id=28]
+animation = "Attack - FR"
 
-[sub_resource type="AnimationNodeStateMachine" id=21]
+[sub_resource type="AnimationNodeAnimation" id=29]
+animation = "Idle"
 
-[sub_resource type="AnimationNodeStateMachine" id=22]
+[sub_resource type="AnimationNodeBlendSpace2D" id=34]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=30]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=31]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=32]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=33]
 
 [sub_resource type="AnimationNodeStateMachine" id=17]
-"states/Attack - Left/node" = SubResource( 19 )
-"states/Attack - Left/position" = Vector2( 723, 153 )
-"states/Attack - Right/node" = SubResource( 20 )
-"states/Attack - Right/position" = Vector2( 469, 58 )
-states/Idle/node = SubResource( 21 )
+"states/Attack - Left/node" = SubResource( 27 )
+"states/Attack - Left/position" = Vector2( 474, 58 )
+"states/Attack - Right/node" = SubResource( 28 )
+"states/Attack - Right/position" = Vector2( 980, 58 )
+states/Idle/node = SubResource( 29 )
 states/Idle/position = Vector2( 723, 58 )
-states/Run/node = SubResource( 22 )
-states/Run/position = Vector2( 974, 58 )
+states/Run/node = SubResource( 34 )
+states/Run/position = Vector2( 723, 177 )
+transitions = [ "Idle", "Attack - Left", SubResource( 30 ), "Attack - Left", "Idle", SubResource( 31 ), "Idle", "Attack - Right", SubResource( 32 ), "Attack - Right", "Idle", SubResource( 33 ) ]
+start_node = "Idle"
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=18]
-
-[sub_resource type="AnimationNodeStateMachinePlayback" id=23]
-
-[sub_resource type="AnimationNodeStateMachinePlayback" id=24]
-
-[sub_resource type="AnimationNodeStateMachinePlayback" id=25]
-
-[sub_resource type="AnimationNodeStateMachinePlayback" id=26]
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 8.5, 12.125 )
@@ -269,10 +274,7 @@ anims/Victory = SubResource( 15 )
 tree_root = SubResource( 17 )
 anim_player = NodePath("../AnimationPlayer")
 parameters/playback = SubResource( 18 )
-"parameters/Attack - Left/playback" = SubResource( 23 )
-"parameters/Attack - Right/playback" = SubResource( 24 )
-parameters/Idle/playback = SubResource( 25 )
-parameters/Run/playback = SubResource( 26 )
+parameters/Run/blend_position = Vector2( 0, 0 )
 
 [node name="HitBoxPivot" type="Position2D" parent="."]
 position = Vector2( 12, -10 )
