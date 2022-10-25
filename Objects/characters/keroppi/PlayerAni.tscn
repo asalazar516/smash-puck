@@ -383,7 +383,7 @@ position = Vector2( 1, -11 )
 texture = ExtResource( 3 )
 hframes = 8
 vframes = 8
-frame = 2
+frame = 28
 __meta__ = {
 "_editor_description_": "YXNlcHJpdGVfd2l6YXJkX2NvbmZpZwpwbGF5ZXJ8PUFuaW1hdGlvblBsYXllcgpzb3VyY2V8PXJlczovL291dHB1dC9LZXJvLmFzZQpsYXllcnw9Cm9wX2V4cHw9VHJ1ZQpvX2ZvbGRlcnw9Cm9fbmFtZXw9Cm9ubHlfdmlzaWJsZXw9RmFsc2UKb19leF9wfD0K"
 }
@@ -410,7 +410,7 @@ anims/Victory = SubResource( 9 )
 tree_root = SubResource( 18 )
 anim_player = NodePath("../AnimationPlayer")
 parameters/playback = SubResource( 19 )
-parameters/Run/blend_position = Vector2( -0.00105155, -1.08728 )
+parameters/Run/blend_position = Vector2( -1.00346, 0.0190752 )
 
 [node name="HitboxPivot" type="Position2D" parent="."]
 position = Vector2( 12, 3 )
