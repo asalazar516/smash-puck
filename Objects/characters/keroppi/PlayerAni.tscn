@@ -1,14 +1,17 @@
-[gd_scene load_steps=34 format=2]
+[gd_scene load_steps=35 format=2]
 
 [ext_resource path="res://Objects/characters/overlap/Hitbox.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Objects/characters/keroppi/Player.gd" type="Script" id=2]
-[ext_resource path="res://Sprites/Characters/Keroppi/Kero.png" type="Texture" id=3]
+
+[sub_resource type="StreamTexture" id=37]
+load_path = "res://.import/Kero.png-74f9aa47636d199de698249fd0b62eaf.stex"
 
 [sub_resource type="RectangleShape2D" id=27]
 extents = Vector2( 9, 5.5 )
 
 [sub_resource type="Animation" id=3]
 length = 0.6
+loop = true
 tracks/0/type = "method"
 tracks/0/path = NodePath(".")
 tracks/0/interp = 1
@@ -62,6 +65,7 @@ tracks/3/keys = {
 
 [sub_resource type="Animation" id=4]
 length = 0.6
+loop = true
 tracks/0/type = "method"
 tracks/0/path = NodePath(".")
 tracks/0/interp = 1
@@ -113,8 +117,9 @@ tracks/3/keys = {
 "values": [ 32.0, 33.0, 34.0, 34.0, 35.0, 35.0 ]
 }
 
-[sub_resource type="Animation" id=31]
+[sub_resource type="Animation" id=38]
 length = 0.6
+loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -128,8 +133,9 @@ tracks/0/keys = {
 "values": [ 49.0, 50.0, 51.0, 51.0, 52.0, 52.0 ]
 }
 
-[sub_resource type="Animation" id=32]
+[sub_resource type="Animation" id=39]
 length = 0.6
+loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -202,6 +208,22 @@ tracks/1/keys = {
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
 "values": [ 0.0, 0.0, 0.0, 1.0, 1.0, 2.0, 2.0, 1.0, 1.0, 3.0, 3.0, 0.0, 0.0, 0.0 ]
+}
+
+[sub_resource type="Animation" id=40]
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 57.0, 58.0, 57.0, 58.0, 57.0, 58.0 ]
 }
 
 [sub_resource type="Animation" id=29]
@@ -380,12 +402,12 @@ __meta__ = {
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 1, -11 )
-texture = ExtResource( 3 )
+texture = SubResource( 37 )
 hframes = 8
 vframes = 8
-frame = 28
+frame = 57
 __meta__ = {
-"_editor_description_": "YXNlcHJpdGVfd2l6YXJkX2NvbmZpZwpwbGF5ZXJ8PUFuaW1hdGlvblBsYXllcgpzb3VyY2V8PXJlczovL291dHB1dC9LZXJvLmFzZQpsYXllcnw9Cm9wX2V4cHw9VHJ1ZQpvX2ZvbGRlcnw9Cm9fbmFtZXw9Cm9ubHlfdmlzaWJsZXw9RmFsc2UKb19leF9wfD0K"
+"_editor_description_": "YXNlcHJpdGVfd2l6YXJkX2NvbmZpZwpwbGF5ZXJ8PUFuaW1hdGlvblBsYXllcgpzb3VyY2V8PXJlczovL1Nwcml0ZXMvQ2hhcmFjdGVycy9LZXJvcHBpL0tlcm8uYXNlCmxheWVyfD0Kb3BfZXhwfD1GYWxzZQpvX2ZvbGRlcnw9Cm9fbmFtZXw9Cm9ubHlfdmlzaWJsZXw9RmFsc2UKb19leF9wfD0K"
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -395,11 +417,12 @@ shape = SubResource( 27 )
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 "anims/Attack - Right" = SubResource( 3 )
 "anims/Atttack - Left" = SubResource( 4 )
-"anims/Back - AttackL" = SubResource( 31 )
-"anims/Back - AttackR" = SubResource( 32 )
+"anims/Back - Attack - Left" = SubResource( 38 )
+"anims/Back - Attack - Right" = SubResource( 39 )
 "anims/Back - Idle" = SubResource( 33 )
 "anims/Back - Running Vert" = SubResource( 34 )
 anims/Idle = SubResource( 5 )
+anims/Lost = SubResource( 40 )
 anims/RESET = SubResource( 29 )
 "anims/Running Left" = SubResource( 6 )
 "anims/Running Right" = SubResource( 7 )
