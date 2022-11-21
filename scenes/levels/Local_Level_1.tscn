@@ -3,7 +3,7 @@
 [ext_resource path="res://Scripts/manager/AI_Level.gd" type="Script" id=1]
 [ext_resource path="res://Objects/characters/keroppi/PlayerAni.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Objects/resources/forest.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Objects/characters/keroppi/keroppi_back.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Objects/characters/Hangyodon/Hangy_back.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Objects/block/block.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Objects/stopper/stopper.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Objects/ball/Ball.tscn" type="PackedScene" id=7]
@@ -115,7 +115,7 @@ tile_data = PoolIntArray( 65536, 2, 0, 65537, 2, 196613, 65547, 2, 65541, 65548,
 [node name="Player" parent="TileMap/YSort" instance=ExtResource( 2 )]
 position = Vector2( 188, 119 )
 
-[node name="Player2" parent="TileMap/YSort" instance=ExtResource( 4 )]
+[node name="Hangyodon" parent="TileMap/YSort" instance=ExtResource( 4 )]
 position = Vector2( 187, 469 )
 player_id = 2
 

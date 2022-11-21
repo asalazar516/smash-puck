@@ -382,7 +382,6 @@ position = Vector2( 1, -11 )
 texture = SubResource( 16 )
 hframes = 8
 vframes = 7
-frame = 29
 __meta__ = {
 "_editor_description_": "YXNlcHJpdGVfd2l6YXJkX2NvbmZpZwpwbGF5ZXJ8PUFuaW1hdGlvblBsYXllcgpzb3VyY2V8PXJlczovL1Nwcml0ZXMvQ2hhcmFjdGVycy9IYW5neW9kb24vSGFuZ3lvZG9uLmFzZXByaXRlCmxheWVyfD0Kb3BfZXhwfD1GYWxzZQpvX2ZvbGRlcnw9Cm9fbmFtZXw9Cm9ubHlfdmlzaWJsZXw9RmFsc2UKb19leF9wfD0K"
 }
