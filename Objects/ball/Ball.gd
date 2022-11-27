@@ -47,7 +47,7 @@ func _physics_process(delta):
 		if "Hitbox" == collision_object.collider.name:
 #			collision_object.collider.hit_ball()
 			print(collision_object.collider.get_owner().player_id)
-			start_invincibility(0.2)
+			start_invincibility(0.1)
 			velocity.x = lerp(velocity.x, -1 * 2, acceleration)
 			velocity.y = lerp(velocity.y, -1 * 2, acceleration)
 			

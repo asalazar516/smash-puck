@@ -24,6 +24,10 @@ config/name="SmashPuck"
 run/main_scene="res://Scenes/menus/main_menu.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+CharacterSelectionManager="*res://Scripts/manager/CharacterSelectionManager.gd"
+
 [display]
 
 window/size/width=400
