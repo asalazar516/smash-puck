@@ -3,6 +3,10 @@ extends Node
 
 var player
 var playerScript = preload("res://Objects/characters/keroppi/Player.gd")
+#playerScript.player_id = 1
+
+var opponent
+var opponentScript = preload("res://Objects/characters/keroppi/Player.gd")
 
 var selectable_characters = {
 	"Keroppi" : preload("res://Objects/characters/keroppi/PlayerAni.tscn"),

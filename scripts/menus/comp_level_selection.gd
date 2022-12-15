@@ -1,0 +1,29 @@
+extends Control
+
+
+# Declare member variables here. Examples:
+# var a = 2
+# var b = "text"
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+#	pass
+
+
+func _on_LeftButton_pressed():
+	get_tree().call_group("LevelLabelGroup", "decrement_list")
+
+
+func _on_RightButton_pressed():
+	get_tree().call_group("LevelLabelGroup", "increment_list")
+
+
+func _on_PlayButton_pressed():
+	get_tree().call_group("LevelLabelGroup", "play_level")
+

@@ -8,15 +8,16 @@ onready var label = $"%TimerLabel"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	spawnChosenCharacters()
+	spawnChosenCharacter()
 	bricks = get_tree().get_nodes_in_group("Bricks")
 	print(bricks.size())
 
 
-func spawnChosenCharacters():
+func spawnChosenCharacter():
 	givenPlayer.position.x = 172
 	givenPlayer.position.y = 437
 	givenPlayer.set_script(CharacterSelectionManager.playerScript)
+	givenPlayer.player_id = 1
 	
 	call_deferred("add_child", givenPlayer)
 

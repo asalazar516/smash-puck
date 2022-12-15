@@ -10,10 +10,6 @@ func _ready():
 #	pass
 
 
-func _on_PlayButton_pressed():
-#	TODO: Go to scene when selecting a level
-	get_tree().call_group("LevelLabelGroup", "play_level")
-
 
 func _on_QuitButton_pressed():
 	get_tree().quit()
@@ -28,3 +24,11 @@ func _on_LeftButton_pressed():
 
 func _on_HowToButton_pressed():
 	get_tree().change_scene("res://Scenes/menus/how_to.tscn")
+
+
+func _on_SingleButton_pressed():
+	get_tree().change_scene("res://Scenes/levels/single_selection_screen.tscn")
+
+
+func _on_CompButton_pressed():
+	get_tree().change_scene("res://Scenes/levels/comp_selection_screen.tscn")

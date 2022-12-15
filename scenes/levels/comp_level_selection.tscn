@@ -1,0 +1,56 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/menus/LevelLabel.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/menus/comp_level_selection.gd" type="Script" id=2]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+margin_left = 157.0
+margin_top = 276.0
+margin_right = 242.0
+margin_bottom = 324.0
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer/VBoxContainer"]
+margin_right = 85.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+margin_top = 4.0
+margin_right = 85.0
+margin_bottom = 24.0
+
+[node name="LeftButton" type="Button" parent="CenterContainer/VBoxContainer/HBoxContainer"]
+margin_right = 25.0
+margin_bottom = 20.0
+text = "<-"
+
+[node name="LevelLabel" type="Label" parent="CenterContainer/VBoxContainer/HBoxContainer" groups=["LevelLabelGroup"]]
+margin_left = 29.0
+margin_top = 3.0
+margin_right = 29.0
+margin_bottom = 17.0
+align = 1
+script = ExtResource( 1 )
+
+[node name="RightButton" type="Button" parent="CenterContainer/VBoxContainer/HBoxContainer"]
+margin_left = 33.0
+margin_right = 58.0
+margin_bottom = 20.0
+text = "->"
+
+[node name="PlayButton" type="Button" parent="CenterContainer/VBoxContainer"]
+margin_top = 28.0
+margin_right = 85.0
+margin_bottom = 48.0
+text = "Play Button"
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/HBoxContainer/LeftButton" to="." method="_on_LeftButton_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/HBoxContainer/RightButton" to="." method="_on_RightButton_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/PlayButton" to="." method="_on_PlayButton_pressed"]
